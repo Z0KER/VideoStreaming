@@ -64,8 +64,8 @@ const upload = require('express-fileupload')
         }
       
         // Pega stats do vídeo
-        const videoPath = "public/video/" + req.params.id + ".mp4";
-        const videoSize = fs.statSync("public/video/" + req.params.id + ".mp4").size;
+        const videoPath = "routes/" + req.params.id + ".mp4";
+        const videoSize = fs.statSync("routes/" + req.params.id + ".mp4").size;
       
         // Analisa intervalo
         const CHUNK_SIZE = 1 * 1e+6;
