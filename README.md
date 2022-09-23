@@ -22,4 +22,4 @@ Para iniciar o servidor express, execute o seguinte comando
 npm run start
 ```
 
-Abra [http://localhost:8080](http://localhost:8080).
+Abra: [http://localhost:8080](http://localhost:8080).
