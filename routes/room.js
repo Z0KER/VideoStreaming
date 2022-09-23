@@ -11,6 +11,7 @@ router.get('/', (req, res) => {
     res.redirect('/')
 })
 
+// Renderiza a página com os dados da sala e do video (se houver um)
 router.get('/:id', (req, res) => {
     Room.findOne({_id: req.params.id}).lean().then((room) => {
         if(room) {
@@ -26,6 +27,7 @@ router.get('/:id', (req, res) => {
     })
 })
 
+// Encerra a sessão e deleta o video inserido
 router.get('/delete/:id', (req, res) => {
     Room.deleteOne({_id: req.params.id}).then(() => {
         fs.unlinkSync(__dirname + '/' + req.params.id + '.mp4')
@@ -37,6 +39,7 @@ router.get('/delete/:id', (req, res) => {
     })
 })
 
+// Insere o video
 router.post('/insert-video', (req, res) => {
     if(req.files) {
         let file = req.files.file

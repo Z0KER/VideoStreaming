@@ -132,7 +132,7 @@ const upload = require('express-fileupload')
 
     app.use('/room', room)
 
-    // Redirecionar para página inicial quando a rota não existir
+    // Redireciona para página inicial quando a rota não existir
         app.use(function(req, res, next) {
             res.redirect('/')
         })
