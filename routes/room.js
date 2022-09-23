@@ -28,7 +28,7 @@ router.get('/:id', (req, res) => {
 
 router.get('/delete/:id', (req, res) => {
     Room.deleteOne({_id: req.params.id}).then(() => {
-        fs.unlinkSync(__dirname + '/../public/video/' + req.params.id + '.mp4')
+        fs.unlinkSync(__dirname + '/' + req.params.id + '.mp4')
         req.flash('success_msg', 'Sessão encerrada com sucesso!')
         res.redirect('/')
     }).catch((err) => {
@@ -41,7 +41,7 @@ router.post('/insert-video', (req, res) => {
     if(req.files) {
         let file = req.files.file
         let filename = req.body.title
-        file.mv(__dirname + '/' + filename + '.mp4', (err) => {
+        file.mv(__dirname + '/uploads/' + filename + '.mp4', (err) => {
             if(err) {
                 req.flash('error_msg', 'Erro ao fazer upload! ' + err)
                 res.redirect('/room/' + req.body.title)
