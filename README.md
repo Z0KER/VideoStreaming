@@ -8,19 +8,18 @@ Clone o repositório e instale as dependências.
 
 ```bash
 git clone https://github.com/Z0KER/VideoStreaming.git
-cd the-example-app.nodejs
 ```
 
 ```bash
 npm install
 ```
 
-## Steps for read-only access
+## Etapas para iniciar o servidor
 
-To start the express server, run the following
+Para iniciar o servidor express, execute o seguinte comando
 
 ```bash
-npm run start:dev
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) and take a look around.
+Abra [http://localhost:8080](http://localhost:8080).
