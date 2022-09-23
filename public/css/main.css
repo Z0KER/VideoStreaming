@@ -1,0 +1,45 @@
+main > .home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+main > .home > .form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 24px;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+main > .home > .form > .title {
+    font-size: 36px;
+    margin-bottom: 12px;
+}
+
+main > .home > .form > .form-content {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+}
+
+main > .home > .form > .form-content > input {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    background-color: rgb(219, 219, 219);
+    color: #000;
+    padding: 6px 4px;
+}
+
+main > .home > .form > .btn-create {
+    background-color: rgb(88, 139, 88);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    cursor: pointer;
+}

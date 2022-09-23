@@ -1,0 +1,21 @@
+<main>
+    <section class="room">
+        <h1 class="title">Bem-vindo à {{room.name}}</h1>
+        <form action="/room/insert-video" method="post" enctype="multipart/form-data" class="form">
+            <div class="form-content">
+                <label for="video">Selecione o vídeo:</label>
+                <input type="file" name="file" accept="video/*" required>
+            </div>
+            <input type="hidden" name="title" value="{{room._id}}">
+            <button class="btn-confirm">Confirmar</button>
+        </form>
+        {{#if video}}
+        <video width="320" height="240" controls="controls" autoplay="autoplay">
+            <source src="/video/{{room._id}}" type="video/mp4">
+        </video>
+        {{else}}
+        {{/if}}
+        <button id="copy">Copiar URL da sala</button>
+        <a class="delete" href="/room/delete/{{room._id}}">Encerrar sessão</a>
+    </section>
+</main>
