@@ -94,6 +94,7 @@ const upload = require('express-fileupload')
         videoStream.pipe(res);
     })
 
+    // Cria a sala
     app.post('/', (req, res) => {
         let errors = []
 
