@@ -41,7 +41,7 @@ router.post('/insert-video', (req, res) => {
     if(req.files) {
         let file = req.files.file
         let filename = req.body.title
-        file.mv('../public/video/' + filename + '.mp4', (err) => {
+        file.mv(__dirname + '/../public/video/' + filename + '.mp4', (err) => {
             if(err) {
                 req.flash('error_msg', 'Erro ao fazer upload! ' + err)
                 res.redirect('/room/' + req.body.title)
