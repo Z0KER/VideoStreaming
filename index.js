@@ -53,7 +53,10 @@ const upload = require('express-fileupload')
 
 // Routes
     app.get('/', (req, res) => {
-        res.render('index')
+        Room.find().lean().then((rooms) => {
+            res.render('index', {rooms: rooms})
+        })
+        
     })
 
     app.get("/video/:id", function (req, res) {

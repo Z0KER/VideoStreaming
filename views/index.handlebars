@@ -8,5 +8,13 @@
             </div>
             <button class="btn-create">Criar sala</button>
         </form>
+        {{#if rooms}}
+            <h1 class="rooms">Salas</h1>
+        {{else}}
+        {{/if}}
+        {{#each rooms}}
+            <p class="roomLink"><a href="/room/{{_id}}">{{name}}: <span>Entrar</span></a></p>
+        {{else}}
+        {{/each}}
     </section>
 </main>

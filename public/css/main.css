@@ -1,9 +1,12 @@
 main > .home {
     display: flex;
     flex-direction: column;
+    gap: 8px;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    border: 1px solid #fff;
+    border-radius: 12px;
+    padding: 16px;
 }
 
 main > .home > .form {
@@ -11,9 +14,6 @@ main > .home > .form {
     flex-direction: column;
     align-items: flex-start;
     gap: 24px;
-    border: 1px solid #fff;
-    border-radius: 12px;
-    padding: 16px;
 }
 
 main > .home > .form > .title {
@@ -42,4 +42,23 @@ main > .home > .form > .btn-create {
     border-radius: 8px;
     padding: 12px 24px;
     cursor: pointer;
+}
+
+main > .home > .rooms {
+    font-size: 28px;
+    margin-top: 24px;
+}
+
+main > .home > .roomLink > a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    padding: 4px;
+}
+main > .home > .roomLink > a > span {
+    background-color: rgb(81, 109, 187);
+    border: none;
+    border-radius: 8px;
+    padding: 8px 24px;
 }

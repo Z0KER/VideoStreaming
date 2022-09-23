@@ -6,6 +6,13 @@
     padding: 0;
 }
 
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 body {
     background-color: rgb(19, 19, 19);
 }
